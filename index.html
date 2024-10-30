@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segundo Parcial</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Futentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header__container">
+        <div class="header__content">
+          <div class="search__container">
+            <input
+              type="text"
+              class="header__input"
+              placeholder="Buscar un producto"
+              id="inputSearch"
+            />
+            <button class="header__button" id="buttonSearch">
+              Buscar<span class="material-symbols-outlined">search</span>
+            </button>
+          </div>
+          <div>
+            <button id="buttonAddElement" class="header__button add__button">
+              Agregar producto<span class="material-symbols-outlined">add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section class="main__container">
+        <aside class="main__list">
+          <h2>
+            Categorias
+            <span class="material-symbols-outlined">filter_list</span>
+          </h2>
+          <ul id="listFilter" />
+        </aside>
+        <article class="main__store" id="store" />
+      </section>
+
+      <!-- MODAL -->
+      <section id="modalPopUp" class="pop_up__container">
+        <div class="pop_up">
+          <header class="pop_up__title">
+            <h1>Agregar o modificar un producto</h1>
+          </header>
+          <section class="pop_up__inputs">
+            <input
+              required
+              type="text"
+              placeholder="Ingresar nombre del producto"
+              id="nombre"
+            />
+            <input
+              required
+              type="text"
+              placeholder="Ingresar la imagen del producto"
+              id="img"
+            />
+            <input
+              required
+              type="number"
+              placeholder="Ingresar precio"
+              value="0"
+              id="precio"
+            />
+            <select id="categoria">
+              <option>Seleccione una categoria</option>
+              <option>Hamburguesas</option>
+              <option>Papas</option>
+              <option>Gaseosas</option>
+            </select>
+          </section>
+          <div class="pop_up__buttons">
+            <button class="pop_up__button cancel" id="cancelButton">
+              Cancelar
+            </button>
+            <button class="pop_up__button accept" id="acceptButton">
+              Aceptar
+            </button>
+            <button class="pop_up__button delete" id="deleteButton">
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
